@@ -8,7 +8,7 @@ NumMotorsSupportedPer = 8
 #initialize
 kit = []
 for i in range(0, NumControllers):
-    kit.append(ServoKit(channels=8, address=(0x40+i)))
+    kit.append(ServoKit(channels=NumMotorsSupportedPer, address=(0x40+i)))
     for j in range(0, NumMotorsSupportedPer): 
         kit[i].servo[j].set_pulse_width_range(500,2400)   
 
